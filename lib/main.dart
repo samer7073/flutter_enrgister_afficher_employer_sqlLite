@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_tp5/ListEmployer.dart';
+import 'package:flutter_application_tp5/Welcome.dart';
 import 'package:flutter_application_tp5/addEmployee.dart';
 
 // Replace with the actual path
@@ -17,7 +18,12 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: ListEmployer(),
+      routes: {
+        '/': (context) => Welcome(), // Default route
+        '/register':(context) => AddEmployee(),
+        '/listemployers' : (context) => ListEmployer(),
+      },
+       
     );
   }
 }
